@@ -23,18 +23,57 @@ export const Details = ({ className }: DetailsProps) => {
                     <div className={styles['details-box']}>
                         <span className={styles.details}>
                             <span className={styles.titles}>
-                                <div>Prompt</div>
-                                <div>Sources</div>
+                                <div className={styles['titles-style']}>Prompt</div>
+                                <div className={styles['titles-style']}>Sources</div>
                             </span>
-                            <span>text</span>
-                            Text
-                            <div>
-                                <input type="number" />
-                            </div>
-                            <span>
-                                <button>Button</button>
-                                <button>Button</button>text
+                            <span className={styles['input-boxes-style']}>
+                                <div className={styles['prompt-container']}>
+                                    <textarea
+                                        className={styles['prmpt-in-box']}
+                                        placeholder={'Type your prompt here...'}
+                                    />
+                                </div>
+                                <span className={styles['sources-container']}>
+                                    <input
+                                        className={styles['sources-input-boxes']}
+                                        placeholder={'Title, Author...'}
+                                    />
+                                    <input
+                                        className={styles['sources-input-boxes']}
+                                        placeholder={'Title, Author...'}
+                                    />
+                                    <input
+                                        className={styles['sources-input-boxes']}
+                                        placeholder={'Title, Author...'}
+                                    />
+                                    <input
+                                        className={styles['sources-input-boxes']}
+                                        placeholder={'Title, Author...'}
+                                    />
+                                    <input
+                                        className={styles['sources-input-boxes']}
+                                        placeholder={'Title, Author...'}
+                                    />
+                                </span>
                             </span>
+                            <span className={styles['essay-choice-container']}>
+                                <select className={styles['essay-choice']}>
+                                    <option className={styles['drop-down']}>Thesis</option>
+                                    <option className={styles['drop-down']}>Research</option>
+                                    <option className={styles['drop-down']}>Argumentative</option>
+                                </select>
+                            </span>
+                            <span className={styles['pages-container']}>
+                                <input
+                                    type="number"
+                                    min="1"
+                                    className={styles['page-input']}
+                                    placeholder={'# of pages'}
+                                ></input>
+                            </span>
+                            <button className={`${styles['essay-choice']} ${styles.next}`}>
+                                Next
+                            </button>
                         </span>
                     </div>
                 </div>
